@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fibonacci</title>
+		<style>
+			body { padding: 0; margin: 0; }
+			h1 { margin: 0; }
+			#wrapper {
+				height: 150px;
+				position: absolute;
+				top: 50%;
+				width: 100%;
+				text-align: center;
+				margin-top: -75px;
+				font-family: sans-serif;
+			}
+			#value {
+				line-height: 75px;
+				font-size: 50px;
+			}
+			#output {
+				display: inline-block;
+				margin: 1em;
+				border: solid 1px #ccc;
+				background: #eee;
+				padding: 1em;
+			}
+		</style>
+		<script>
+			var dojoConfig = {
+				async: true,
+				baseUrl: '/',
+				packages: [
+					{ name: 'app', location: 'app' },
+					{ name: 'dojo', location: 'node_modules/dojo' }
+				]
+			}
+		</script>
+
+		<script src="../node_modules/dojo/dojo.js"></script>
+
+		<script>
+			require([ 'app/main', 'dojo/domReady!' ], function (main) {
+				main.start();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<h1>Fortunes</h1>
+			<div id="output-wrapper"><div id="output">?</div></div>
+			<button type="button" id="next">Next</button>
+		</div>
+	</body>
+</html>

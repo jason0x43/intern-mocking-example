@@ -1,0 +1,7 @@
+{
+	"name": "intern-mocking-example",
+	"dependencies": {
+		"intern": "https://github.com/theintern/intern/archive/sinon.tar.gz",
+		"dojo": "~1.9.0"
+	}
+}
