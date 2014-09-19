@@ -1,6 +1,5 @@
 define([
-	'./rotator',
-	'./fortunes',
-	'./fortunes-sinon',
+	'./amd',
+	'./requests',
 	'./spy'
 ], function () {});
