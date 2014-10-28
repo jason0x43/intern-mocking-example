@@ -11,7 +11,7 @@ define([
 	assert
 ) {
 	registerSuite({
-		name: 'spy',
+		name: 'sinon-spy',
 
 		'simple spy': function () {
 			var callback = spy();

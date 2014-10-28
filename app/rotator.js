@@ -5,25 +5,28 @@ define([ './display', './fortunes' ], function (Display, fortunes) {
 		this.display = new Display();
 	}
 
-	Rotator.prototype.refresh = function () {
-		var self = this;
-		fortunes.load().then(function (data) {
-			self.fortunes = data;
-		});
-	};
+	Rotator.prototype = {
+		refresh: function () {
+			var self = this;
+			fortunes.load().then(function (data) {
+				self.fortunes = data;
+				self.next();
+			});
+		},
 
-	Rotator.prototype.next = function () {
-		if (this.fortunes.length === 0) {
-			return;
-		}
-		this.display.update(this.fortunes[this.current]);
-		this.current = (this.current + 1) % this.fortunes.length;
-	};
+		next: function () {
+			if (this.fortunes.length === 0) {
+				return;
+			}
+			this.display.update(this.fortunes[this.current]);
+			this.current = (this.current + 1) % this.fortunes.length;
+		},
 
-	Rotator.prototype.reset = function () {
-		this.current = 0;
-		if (this.fortunes.length > 0) {
-			this.display.update(0);
+		reset: function () {
+			this.current = 0;
+			if (this.fortunes.length > 0) {
+				this.display.update(0);
+			}
 		}
 	};
 

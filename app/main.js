@@ -1,14 +1,20 @@
-define([ 'app/rotator', 'dojo/dom', 'dojo/on' ], function (Rotator, dom, on) {
-	return {
+define([
+	'app/rotator',
+	'app/fortunes',
+	'dojo/dom',
+	'dojo/on'
+], function (Rotator, fortunes, dom, on) {
+	function Main() {
+		this.rotator = new Rotator();
+	}
+
+	Main.prototype = {
 		start: function () {
-			var next = dom.byId('next'),
-				rotator = new Rotator();
-
-			rotator.refresh();
-
-			this.handle = on(next, 'click', function () {
+			var rotator = this.rotator;
+			this.handle = on(dom.byId('next'), 'click', function () {
 				rotator.next();
 			});
+			rotator.refresh();
 		},
 
 		stop: function () {
@@ -16,4 +22,6 @@ define([ 'app/rotator', 'dojo/dom', 'dojo/on' ], function (Rotator, dom, on) {
 			this.handle = null;
 		}
 	};
+
+	return Main;
 });

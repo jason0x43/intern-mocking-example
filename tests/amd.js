@@ -9,11 +9,11 @@ define([
 	var Rotator;
 
 	registerSuite({
-		name: 'app/Rotator',
+		name: 'amd',
 
 		setup: function () {
-			// Instead of requiring app/fib in this test suite's dependencies, we require it through the amdMocker, which
-			// will return a fib module that depends on tests/mocks/display rather than app/display.
+			// Instead of requiring app/fib in this test suite's dependencies, we require it through the amdMocker,
+			// which will return a fib module that depends on tests/mocks/display rather than app/display.
 			return amdMocker.mock('app/rotator', {
 				'app/display': 'tests/mocks/display',
 				'app/fortunes': 'tests/mocks/fortunes'
@@ -30,7 +30,6 @@ define([
 
 			r.refresh();
 
-			r.next();
 			assert.equal(r.display.value, 'foo');
 			r.next();
 			assert.equal(r.display.value, 'bar');

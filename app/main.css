@@ -1,0 +1,26 @@
+body { padding: 0; margin: 0; }
+
+h1 { margin: 0; }
+
+#wrapper {
+	height: 150px;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	text-align: center;
+	margin-top: -75px;
+	font-family: sans-serif;
+}
+
+#value {
+	line-height: 75px;
+	font-size: 50px;
+}
+
+#output {
+	display: inline-block;
+	margin: 1em;
+	border: solid 1px #ccc;
+	background: #eee;
+	padding: 1em;
+}

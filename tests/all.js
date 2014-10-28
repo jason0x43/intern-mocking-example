@@ -1,5 +1,7 @@
 define([
 	'./amd',
 	'./requests',
-	'./spy'
+	'./sinon-spy',
+	'./sinon-stub',
+	'./sinon-xhr'
 ], function () {});

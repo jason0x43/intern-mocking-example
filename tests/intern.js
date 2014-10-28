@@ -33,7 +33,8 @@ define([ 'intern' ], function (intern) {
 			// Packages that should be registered with the loader in each testing environment
 			packages: [
 				{ name: 'app', location: 'app' },
-				{ name: 'dojo', location: 'node_modules/dojo' }
+				{ name: 'dojo', location: 'node_modules/dojo' },
+				{ name: 'sinon-chai', location: 'node_modules/sinon-chai/lib' }
 			]
 		},
 		suites: [ 'tests/all' ],
