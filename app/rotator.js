@@ -34,7 +34,7 @@ define([ './display', './fortunes' ], function (Display, fortunes) {
 			this.stop();
 			this.interval = setInterval(function () {
 				self.next();
-			}, 3000);
+			}, 2000);
 		},
 
 		stop: function () {
