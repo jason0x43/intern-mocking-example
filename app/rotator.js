@@ -1,8 +1,8 @@
 define([ './display', './fortunes' ], function (Display, fortunes) {
-	function Rotator() {
+	function Rotator(node) {
 		this.fortunes = [];
 		this.current = 0;
-		this.display = new Display();
+		this.display = new Display(node);
 	}
 
 	Rotator.prototype = {
@@ -27,6 +27,18 @@ define([ './display', './fortunes' ], function (Display, fortunes) {
 			if (this.fortunes.length > 0) {
 				this.display.update(0);
 			}
+		},
+
+		start: function () {
+			var self = this;
+			this.stop();
+			this.interval = setInterval(function () {
+				self.next();
+			}, 3000);
+		},
+
+		stop: function () {
+			clearInterval(this.interval);
 		}
 	};
 

@@ -1,5 +1,5 @@
 /**
- * This test shows how to use Intern's amdMocker module to mock AMD dependencies.
+ Use Intern's amdMocker module to mock AMD dependencies.
  */
 define([
 	'intern!object',

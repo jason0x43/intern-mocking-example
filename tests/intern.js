@@ -9,6 +9,9 @@ define([ 'intern' ], function (intern) {
 		case 'ff':
 			environments = [ { browserName: 'firefox' } ];
 			break;
+		case 'phantom':
+			environments = [ { browserName: 'phantomjs' } ];
+			break;
 		case 'chrome':
 			/* falls through */
 		default:

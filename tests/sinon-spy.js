@@ -1,5 +1,5 @@
 /**
- * This test suite illustrates how to use the sinon.spy module with Intern.
+ * Use the sinon.spy module with Intern.
  */
 define([
 	'intern!object',

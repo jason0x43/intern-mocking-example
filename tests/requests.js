@@ -1,5 +1,5 @@
 /**
- * This test shows how to mock dojo/request network requests using dojo/request/registry.
+ * Mock dojo/request network requests using dojo/request/registry.
  */
 define([
 	'intern!object',

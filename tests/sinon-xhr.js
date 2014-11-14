@@ -1,5 +1,5 @@
 /**
- * This test suite illustrates how to sinon's XHR mocking Intern.
+ * Use sinon's XHR mocking with Intern.
  */
 define([
 	'intern!object',
@@ -23,6 +23,9 @@ define([
 			}
 
 			var dfd = this.async();
+			
+			// createFakeServer creates a mock XHR server that auto-responds to requests. By default a mock XHR server
+			// won't respond until you call server.respond().
 			var server = createFakeServer();
 
 			server.respondWith(function (request) {

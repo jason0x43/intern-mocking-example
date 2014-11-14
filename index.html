@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<title>Fibonacci</title>
-		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="app/main.css">
 		<script>
 			var dojoConfig = {
 				async: true,
@@ -14,20 +14,18 @@
 			}
 		</script>
 
-		<script src="../node_modules/dojo/dojo.js"></script>
+		<script src="node_modules/dojo/dojo.js"></script>
 
 		<script>
 			require([ 'app/Main', 'dojo/domReady!' ], function (Main) {
-				var main = new Main();
-				main.start();
+				var main = new Main('fortunes');
 			});
 		</script>
 	</head>
 	<body>
-		<div id="wrapper">
+		<div class="wrapper">
 			<h1>Fortunes</h1>
-			<div id="output-wrapper"><div id="output">?</div></div>
-			<button type="button" id="next">Next</button>
+			<div id="fortunes"></div>
 		</div>
 	</body>
 </html>
